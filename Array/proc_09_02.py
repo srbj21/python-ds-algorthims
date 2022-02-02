@@ -51,7 +51,12 @@ def get_return_code(p_return_rk):
     query=f'''select return_code from {db}.{tbl_dim_dpm_return} where return_rk={p_return_rk}'''
     return_code=spark.sql(query).collect()[0][0]
     return return_code
-  
+
+def get_year(v_year_month_rk):
+    query=f'''select year from {db}.{tbl_dim_year_month} where year_month_rk={v_year_month_rk}'''
+    yr= spark.sql(query).collect()[0][0]
+    return yr
+
 def create_trs_corep_09_02_stg(v_year_month_rk,p_return_rk,v_ytd,p_run_rk):
     
     df_temp_table_09_02=create_temp_trs_corep_09_02(v_year_month_rk,p_return_rk,v_ytd)
