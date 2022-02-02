@@ -1,0 +1,1 @@
+sqlldr fdm@FDMP/<pwd> control=MASTER_alg_downgrade_stress_20201020.csv.FDM2.CTL log=ALG_downgrade_20201020_LIQ_13032018_JUN2010_3M_CONCATENATED.csv.log
