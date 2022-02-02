@@ -40,6 +40,9 @@ Bad record Unix command
 awk -F'~' '{print  $1}' MASTER_ven_dst_stress_20210222.dat | awk '{ if ( length > 50 ) print NR, length, $1}' 
 awk -F'~' '{print  $1}' MASTER_ven_dst_stress_20180226.dat | awk '{ if ( length > 100 ) print NR, length, $0}' 
 
+awk -F'~' '{print  $1}' MASTER_ven_dst_stress_20180226.dat | awk '{ if ( length > 100 ) print NR, length, $0}' 
+awk -F'~' '{print  $1}' MASTER_ven_dst_stress_20180226.dat | awk '{ if ( length > 100 ) print NR, length, $0}' 
+
 
 cat MASTER_ven_dst_stress.dat | awk '{print length($0), $0}' | sort -g | tail -5
 
